@@ -1,7 +1,10 @@
 const { loadConfig } = require("./config");
 
 function apiUrl() {
-  return process.env.NOVA_LINK_API_URL || loadConfig()?.apiUrl || "http://localhost:4000";
+  // Defaults to the deployed backend so `npm install -g nova-link-cli`
+  // works immediately for anyone, with no setup — override with
+  // NOVA_LINK_API_URL if you're pointing at a different instance (e.g. local dev).
+  return process.env.NOVA_LINK_API_URL || loadConfig()?.apiUrl || "https://backend-lmtu.onrender.com";
 }
 
 async function request(path, { method = "GET", body, auth = true } = {}) {
