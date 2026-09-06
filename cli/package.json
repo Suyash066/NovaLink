@@ -1,0 +1,19 @@
+{
+  "name": "nova-link-cli",
+  "version": "0.1.0",
+  "description": "Terminal companion for nova-link — log in, browse projects/channels, chat, start calls, and ask the AI assistant, all from the command line.",
+  "bin": {
+    "nova-link": "./bin/nova-link.js"
+  },
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "yargs": "^17.7.2",
+    "socket.io-client": "^4.7.5",
+    "chalk": "^4.1.2",
+    "fs-extra": "^11.2.0",
+    "tar": "^6.2.1"
+  }
+}
